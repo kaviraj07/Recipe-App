@@ -16,7 +16,7 @@ class Recipe extends Component {
                 </div>
 
                 <div className="recipe-card-content">
-                    <h1 className="recipe-card-title">Recipe {title}</h1>
+                    <h1 className="recipe-card-title"> {title}</h1>
 
                     <ul>
                         {ingredients}

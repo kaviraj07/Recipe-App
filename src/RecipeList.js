@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import PropTypes from 'prop-types';
 import Recipe from './Recipe';
 import './RecipeList.css';
-import Navbar from './Navbar';
 
 class RecipeList extends Component{
 
@@ -30,7 +29,7 @@ class RecipeList extends Component{
     }
 
     static propTypes={
-        recipes:PropTypes.arrayOf(PropTypes.object)
+        recipes:PropTypes.arrayOf(PropTypes.object).isRequired
     }
     render(){
         const recipes =this.props.recipes.map((r,index) => (

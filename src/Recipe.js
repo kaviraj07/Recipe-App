@@ -1,9 +1,19 @@
 import React, { Component} from 'react';
+import propTypes from 'prop-types';
  
 class Recipe extends Component {
 
-    render(){
+    //This will validate whether the attributes are present (is required)
+    static propTypes ={
 
+        title: propTypes.string.isRequired,
+        ingredients: propTypes.string.isRequired,
+        instructions:propTypes.string.isRequired,
+        image:propTypes.string.isRequired
+    }
+
+    render(){
+        
         const {title,img,instructions}=this.props;
         const ingredients=this.props.ingredients.map((ing,index) => (
             <li key={index}> {ing} </li>
